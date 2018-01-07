@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nvisary.ui.MainFrame">
+   <children>
+      <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnEncoderClick" text="ENCODER">
+         <font>
+            <Font name="Book Antiqua Bold" size="43.0" />
+         </font>
+      </Button>
+      <Button layoutX="9.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnDecoderClick" text="DECODER">
+         <font>
+            <Font name="Book Antiqua Bold" size="43.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
