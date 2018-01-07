@@ -17,9 +17,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.io.File;
 
-/**
- * Created by sgfromrus on 11.2017
- */
+
 public class EncoderFrame extends Application {
     @FXML
     public TextField textFieldKey;

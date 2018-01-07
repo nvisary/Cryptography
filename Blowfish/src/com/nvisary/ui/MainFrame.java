@@ -9,9 +9,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * Created by sgfromrus on 11.2017
- */
 public class MainFrame extends Application {
     private Stage primaryStage;
 

@@ -1,8 +1,5 @@
 package com.nvisary.blowfish;
 
-/**
- * Created by sgfromrus on 11.2017
- */
 public class Constants {
     private final int[] P = {
             0x243F6A88, 0x85A308D3, 0x13198A2E, 0x03707344,

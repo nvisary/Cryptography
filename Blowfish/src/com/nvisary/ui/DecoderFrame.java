@@ -13,12 +13,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
-/**
- * Created by sgfromrus on 11.2017
- */
 public class DecoderFrame extends Application {
     @FXML
     public TextField textFieldKey;

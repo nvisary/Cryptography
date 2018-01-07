@@ -7,9 +7,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * Created by sgfromrus on 11.2017
- */
 public class Run {
     public static void main(String[] args) {
         try {
