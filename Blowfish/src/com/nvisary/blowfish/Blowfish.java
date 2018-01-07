@@ -1,7 +1,6 @@
 package com.nvisary.blowfish;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -32,7 +31,7 @@ public class Blowfish {
     private int[] encrypt(int l, int r) {
         int temp;
         for (byte i = 0; i < 16; i++) {
-            l ^= P[i]; //возводим в i ключ левую часть
+            l ^= P[i];
             r ^= F(l);
 
             temp = l;
@@ -88,7 +87,6 @@ public class Blowfish {
     }
 
     private void blowfishInit(byte[] key) {
-        //расширение ключа
         int longKey = 0;
         for (int i = 0; i < 18; i++) {
             for (int j = 0, k = 0; j < 4; j++, k++) {
@@ -96,7 +94,7 @@ public class Blowfish {
             }
             P[i] = P[i] ^ longKey;
         }
-        //вычисляем новые значения элементов матрицы раундовых ключей
+
         int[] y = {0, 0};
         for (int i = 0; i < 18; i += 2) {
             y = encrypt(y[0], y[1]);
@@ -104,7 +102,6 @@ public class Blowfish {
             P[i + 1] = y[1];
         }
 
-        //вычисляем новые значения элементов матрицы подстановки
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 256; j++) {
                 y = encrypt(y[0], y[1]);
@@ -157,7 +154,7 @@ public class Blowfish {
     }
 
     public byte[] encode(String key, byte[] text) {
-        blowfishInit(key.getBytes());
+        blowfishInit(Integer.toString(key.hashCode()).getBytes());
         int textLen = text.length;
         int blockCount = (textLen % 8 != 0) ? (textLen / 8 + 1) : (textLen / 8);
         int p = blockCount * 8 - textLen;
@@ -188,7 +185,7 @@ public class Blowfish {
     }
 
     public byte[] decode(String key, byte[] text) {
-        blowfishInit(key.getBytes());
+        blowfishInit(Integer.toString(key.hashCode()).getBytes());
         int textLen = text.length;
         int p = text[textLen - 1];
         textLen -= (p + 1);

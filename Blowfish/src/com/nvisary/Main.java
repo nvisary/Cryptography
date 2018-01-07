@@ -10,12 +10,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
             Blowfish encoder = new Blowfish();
             Blowfish decoder = new Blowfish();
-            String key = encoder.generateKey();
-            encoder.saveKeyToFile("key.txt", key);
-            encoder.encodeFile("cat.jpg", "out.binar", key);
-
-            String key2 = decoder.loadKeyFromFile("key.txt");
-            decoder.decodeFile("out.binar", "out.jpg", key2);
-
+            encoder.encodeFile("in.txt", "out.binar", "mykey");
+            decoder.decodeFile("out.binar", "new.txt", "mykey");
     }
 }
