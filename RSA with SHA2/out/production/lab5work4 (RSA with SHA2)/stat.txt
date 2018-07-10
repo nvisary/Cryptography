@@ -1,0 +1,14 @@
+time1 = 3317
+time2 = 3348
+time3 = 3395
+timeAvr = 3353
+
+time1 = 1113              1596
+time2 = 1132              1539
+time3 = 1131
+time4 = 1152
+time5 = 1173
+timeAvr = 1140
+
+
+
